@@ -1,0 +1,64 @@
+body{
+  background-image: url("../img/escheresque_ste");
+  font-family:Verdana;
+}
+.button1 {width: 250px;}
+.button1 {font-size: 10px;}
+.button1 {background-color: #4CAF50;}
+
+.dws-menu{
+   background-color: white;
+   margin-top: 100px;
+   width: 100%;
+}
+ul.dws-ul{
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+li.dws-li{
+  list-style: none;
+  padding: 10px;
+}
+li.dws-li a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  position: relative;
+}
+li.dws-li a i{
+  margin-right: 10px;
+}
+li.dws-li a::before{
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #33bdf1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: .5s;
+  mix-blend-mode: multiply;
+}
+li.dws-li a::after{
+  content: '';
+  width: 0px;
+  height: 3px;
+  background-color: #ff2117;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transition: .5s;
+  mix-blend-mode: multiply;
+}
+li.dws-li:hover{
+  background-color: #e5eae8;
+}
+li.dws-li:hover a::before{
+  width: 50%;
+  transform: translateX(100%);
+}
+li.dws-li:hover a::after{
+  width: 50%;
+  transform: translateX(-100%);
+}
